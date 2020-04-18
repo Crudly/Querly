@@ -3,8 +3,9 @@
 namespace Crudly\Querly;
 
 use Crudly\Querly\Buildly;
+use Illuminate\Database\Eloquent\Model;
 
-class Querly
+class Querly extends Model
 {
     /**
      * The base query builder instance.

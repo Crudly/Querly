@@ -12,7 +12,7 @@
     "homepage": "https://github.com/crudly/querly",
     "keywords": ["Laravel", "CRUD", "query"],
     "require": {
-        
+        "crudly/connectly": "~1.0-dev"
     },
     "require-dev": {
     },
