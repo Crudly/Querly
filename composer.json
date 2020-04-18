@@ -1,0 +1,32 @@
+{
+    "name": "crudly/querly",
+    "description": "",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Larzs",
+            "email": "wester@inbox.lv",
+            "homepage": "https://github.com/orgs/crudly/people/Larzs"
+        }
+    ],
+    "homepage": "https://github.com/crudly/querly",
+    "keywords": ["Laravel", "CRUD", "query"],
+    "require": {
+        
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Crudly\\Querly\\": "src"
+        }
+    },
+    "autoload-dev": {
+
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
