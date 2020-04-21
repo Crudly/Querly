@@ -3,10 +3,14 @@
 namespace Crudly\Querly;
 
 use Crudly\Querly\Buildly;
+use Crudly\Connectly\Connectly;
 use Illuminate\Database\Eloquent\Model;
 
 class Querly extends Model
 {
+    protected $table = 'crudly_querlies';
+
+
     /**
      * The base query builder instance.
      *
@@ -44,6 +48,6 @@ class Querly extends Model
     */
     public function connectly()
     {
-        return $this->belongsTo(\Crudly\Connectly::class);
+        return $this->belongsTo(Connectly::class, with(new Connectly)->getTable());
     }
 }

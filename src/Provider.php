@@ -30,4 +30,17 @@ class Provider extends ServiceProvider
     {
         $this->mergeConfigFrom(__DIR__.'/../config/querly.php', 'querly');
     }
+    
+    /**
+     * Console-specific booting.
+     *
+     * @return void
+     */
+    protected function bootForConsole()
+    {
+        // Publishing the configuration file.
+        $this->publishes([
+            __DIR__.'/../config/querly.php' => config_path('querly.php'),
+        ]);
+    }
 }

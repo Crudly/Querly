@@ -4,6 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+use Crudly\Connectly\Connectly;
+
 class CreateCrudlyQuerliesTable extends Migration
 {
     /**
@@ -17,6 +19,7 @@ class CreateCrudlyQuerliesTable extends Migration
             $table->id();
             $table->json('config');
             $table->unsignedBigInteger('connectly_id');
+            $table->foreign('connectly_id')->references('id')->on(with(new Connectly)->getTable());
             $table->timestamps();
         });
     }
