@@ -40,10 +40,10 @@ class Querly extends Model
     }
 
     /**
-    * Get the author of the post.
+    * Get the connection of the query.
     */
     public function connectly()
     {
-        return $this->belongsTo('Crudly\Connectly');
+        return $this->belongsTo(\Crudly\Connectly::class);
     }
 }

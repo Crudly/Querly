@@ -28,34 +28,6 @@ class Provider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/querly.php', 'provider');
-
-        // Register the service the package provides.
-        $this->app->singleton('provider', function ($app) {
-            return new Provider;
-        });
-    }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return ['provider'];
-    }
-    
-    /**
-     * Console-specific booting.
-     *
-     * @return void
-     */
-    protected function bootForConsole()
-    {
-        // Publishing the configuration file.
-        $this->publishes([
-            __DIR__.'/../config/querly.php' => config_path('querly.php'),
-        ], 'querly.config');
+        $this->mergeConfigFrom(__DIR__.'/../config/querly.php', 'querly');
     }
 }

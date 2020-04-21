@@ -16,10 +16,8 @@ class CreateCrudlyQuerliesTable extends Migration
         Schema::create('crudly_querlies', function (Blueprint $table) {
             $table->id();
             $table->json('config');
-            $table->bigInteger('connectly_id');
+            $table->unsignedBigInteger('connectly_id');
             $table->timestamps();
-
-            $table->index('connectly_id', 'crudly_querly_connectly');
         });
     }
 
