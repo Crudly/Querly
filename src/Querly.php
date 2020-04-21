@@ -39,5 +39,11 @@ class Querly extends Model
         $this->query = new Buildly();
     }
 
-
+    /**
+    * Get the author of the post.
+    */
+    public function connectly()
+    {
+        return $this->belongsTo('Crudly\Connectly');
+    }
 }
